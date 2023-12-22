@@ -1,0 +1,1 @@
+http://localhost:5000/sparql?query=SELECT(COUNT(?x)AS%20?nb){?x%20a%20owl:Class.}

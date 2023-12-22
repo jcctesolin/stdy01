@@ -1,0 +1,4 @@
+QUERY /sparql HTTP/1.1
+Host: localhost:5000
+
+SELECT (COUNT(?x) AS ?nb) { ?x a owl:Class . }
