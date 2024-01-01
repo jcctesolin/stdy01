@@ -1,0 +1,1435 @@
+@prefix : <http://example.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.com#> .
+
+<http://example.com> rdf:type owl:Ontology ;
+                      owl:imports <http://purl.org/nemo/gufo#/1.0.0> ;
+                      <http://purl.org/dc/elements/1.1/title> "My first ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/nemo/gufo#isDerivedFrom
+gufo:isDerivedFrom rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.com#bindsMedium
+:bindsMedium rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf gufo:externallyDependsOn ;
+             rdfs:domain :DetectBond ;
+             rdfs:range :Medium ;
+             rdfs:label "bindsMedium"@en .
+
+
+###  http://example.com#bindsReceiver
+:bindsReceiver rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf gufo:inheresIn ;
+               rdfs:domain :DetectBond ;
+               rdfs:range :Receiver ;
+               rdfs:label "bindsReceiver"@en .
+
+
+###  http://example.com#bindsSignal
+:bindsSignal rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf gufo:externallyDependsOn ;
+             rdfs:domain :DetectBond ;
+             rdfs:range :Signal ;
+             rdfs:label "bindsSignal"@en .
+
+
+###  http://example.com#decodes
+:decodes rdf:type owl:ObjectProperty ;
+         rdfs:domain :Receiver ;
+         rdfs:range :WSender .
+
+
+###  http://example.com#decodesMSignal
+:decodesMSignal rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :decodesSignal ;
+                rdfs:domain :Receiver ;
+                rdfs:range :MSignal ;
+                owl:propertyDisjointWith :decodesSSignal .
+
+
+###  http://example.com#decodesSSignal
+:decodesSSignal rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :decodesSignal ;
+                rdfs:domain :Receiver ;
+                rdfs:range :SSignal .
+
+
+###  http://example.com#decodesSignal
+:decodesSignal rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :detectsSignal ;
+               rdfs:domain :Receiver ;
+               rdfs:range :WSignal .
+
+
+###  http://example.com#detectsSignal
+:detectsSignal rdf:type owl:ObjectProperty ;
+               rdfs:domain :Receiver ;
+               rdfs:range :Signal .
+
+
+###  http://example.com#generates
+:generates rdf:type owl:ObjectProperty ;
+           rdfs:domain :Sender ;
+           rdfs:range :Signal .
+
+
+###  http://example.com#generatesMSignal
+:generatesMSignal rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :generatesWSignal ;
+                  rdfs:domain :MSender ;
+                  rdfs:range :MSignal ;
+                  owl:propertyDisjointWith :generatesSSignal .
+
+
+###  http://example.com#generatesSSignal
+:generatesSSignal rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :generatesWSignal ;
+                  rdfs:domain :SSender ;
+                  rdfs:range :SSignal .
+
+
+###  http://example.com#generatesWSignal
+:generatesWSignal rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :generates ;
+                  rdfs:domain :WSender ;
+                  rdfs:range :WSignal .
+
+
+###  http://example.com#hasCommHW
+:hasCommHW rdf:type owl:ObjectProperty ;
+           rdfs:domain :CommDevice ;
+           rdfs:range :CommHW ;
+           rdfs:label "hasCommHW"@en .
+
+
+###  http://example.com#hasCommSW
+:hasCommSW rdf:type owl:ObjectProperty ;
+           rdfs:domain :CommDevice ;
+           rdfs:range :CommSW ;
+           rdfs:label "hasCommSW"@en .
+
+
+###  http://example.com#isServedBy
+:isServedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :decodes ;
+            rdfs:domain :Receiver ;
+            rdfs:range :SSender ;
+            owl:propertyDisjointWith :monitors .
+
+
+###  http://example.com#monitors
+:monitors rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :decodes ;
+          rdfs:domain :Receiver ;
+          rdfs:range :MSender .
+
+
+###  http://example.com#requestService
+:requestService rdf:type owl:ObjectProperty ;
+                rdfs:domain :ULNode ;
+                rdfs:range :LLNode ;
+                rdfs:label "requestService"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.com#bandwidth
+:bandwidth rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf gufo:hasQualityValue ;
+           rdfs:domain :PhySignal ;
+           rdfs:label "bandwidth"@en .
+
+
+###  http://example.com#frequency
+:frequency rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf gufo:hasQualityValue ;
+           rdfs:domain :PhySignal ;
+           rdfs:label "frequency"@en .
+
+
+###  http://example.com#power
+:power rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf gufo:hasQualityValue ;
+       rdfs:domain :PhySignal ;
+       rdfs:label "power"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.com#Air
+:Air rdf:type owl:Class ;
+     rdfs:subClassOf :PhyMedium .
+
+
+###  http://example.com#CoaxialCable
+:CoaxialCable rdf:type owl:Class ;
+              rdfs:subClassOf :PhyMedium .
+
+
+###  http://example.com#CommDevice
+:CommDevice rdf:type owl:Class ;
+            rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#CommHW
+:CommHW rdf:type owl:Class ;
+        rdfs:subClassOf gufo:FunctionalComplex ;
+        owl:disjointWith :CommSW .
+
+
+###  http://example.com#CommSW
+:CommSW rdf:type owl:Class ;
+        rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#DecodedBond
+:DecodedBond rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( :LLLink
+                                                 :ULLink
+                                               )
+                                 ] ,
+                                 [ rdf:type owl:Class ;
+                                   owl:unionOf ( :LogLink
+                                                 :PhyLink
+                                               )
+                                 ] ,
+                                 [ rdf:type owl:Class ;
+                                   owl:unionOf ( :MonitoredBond
+                                                 :SelectedBond
+                                               )
+                                 ] ;
+             rdfs:subClassOf :DetectBond .
+
+
+###  http://example.com#DetectBond
+:DetectBond rdf:type owl:Class ;
+            rdfs:subClassOf gufo:ExtrinsicMode ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :bindsMedium ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Medium
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :bindsReceiver ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Receiver
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :bindsSignal ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Signal
+                            ] .
+
+
+###  http://example.com#EMWave
+:EMWave rdf:type owl:Class ;
+        rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#FiberCable
+:FiberCable rdf:type owl:Class ;
+            rdfs:subClassOf :PhyMedium .
+
+
+###  http://example.com#HTTP
+:HTTP rdf:type owl:Class ;
+      rdfs:subClassOf :CommSW ;
+      owl:disjointWith <http://example.com#80211Med> .
+
+
+###  http://example.com#LLLink
+:LLLink rdf:type owl:Class ;
+        rdfs:subClassOf :DecodedBond .
+
+
+###  http://example.com#LLMedium
+:LLMedium rdf:type owl:Class ;
+          rdfs:subClassOf :Medium .
+
+
+###  http://example.com#LLNode
+:LLNode rdf:type owl:Class ;
+        rdfs:subClassOf :Node .
+
+
+###  http://example.com#LogLink
+:LogLink rdf:type owl:Class ;
+         rdfs:subClassOf :DecodedBond ;
+         owl:disjointWith :PhyLink .
+
+
+###  http://example.com#LogMedium
+:LogMedium rdf:type owl:Class ;
+           rdfs:subClassOf :Medium ,
+                           gufo:ExtrinsicMode ;
+           owl:disjointWith :PhyMedium .
+
+
+###  http://example.com#LogNode
+:LogNode rdf:type owl:Class ;
+         rdfs:subClassOf :CommSW ,
+                         :Node ;
+         owl:disjointWith :PhyNode .
+
+
+###  http://example.com#LogSignal
+:LogSignal rdf:type owl:Class ;
+           rdfs:subClassOf :Signal ;
+           owl:disjointWith :PhySignal .
+
+
+###  http://example.com#MSender
+:MSender rdf:type owl:Class ;
+         rdfs:subClassOf :WSender .
+
+
+###  http://example.com#MSignal
+:MSignal rdf:type owl:Class ;
+         rdfs:subClassOf :WSignal .
+
+
+###  http://example.com#Medium
+:Medium rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :LLMedium
+                                            :ULMedium
+                                          )
+                            ] ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( :LogMedium
+                                            :PhyMedium
+                                          )
+                            ] ;
+        rdfs:subClassOf gufo:Endurant .
+
+
+###  http://example.com#MonitoredBond
+:MonitoredBond rdf:type owl:Class ;
+               rdfs:subClassOf :DecodedBond .
+
+
+###  http://example.com#Node
+:Node rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Class ;
+                            owl:unionOf ( :LLNode
+                                          :ULNode
+                                        )
+                          ] ,
+                          [ rdf:type owl:Class ;
+                            owl:unionOf ( :LogNode
+                                          :PhyNode
+                                        )
+                          ] ,
+                          [ rdf:type owl:Class ;
+                            owl:unionOf ( :Receiver
+                                          :Sender
+                                        )
+                          ] ;
+      rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#PhyLink
+:PhyLink rdf:type owl:Class ;
+         rdfs:subClassOf :DecodedBond .
+
+
+###  http://example.com#PhyMedium
+:PhyMedium rdf:type owl:Class ;
+           rdfs:subClassOf :Medium ,
+                           gufo:FunctionalComplex .
+
+
+###  http://example.com#PhyNode
+:PhyNode rdf:type owl:Class ;
+         rdfs:subClassOf :CommHW ,
+                         :Node .
+
+
+###  http://example.com#PhySignal
+:PhySignal rdf:type owl:Class ;
+           rdfs:subClassOf :EMWave ,
+                           :Signal .
+
+
+###  http://example.com#Receiver
+:Receiver rdf:type owl:Class ;
+          rdfs:subClassOf :Node .
+
+
+###  http://example.com#SSender
+:SSender rdf:type owl:Class ;
+         rdfs:subClassOf :WSender .
+
+
+###  http://example.com#SSignal
+:SSignal rdf:type owl:Class ;
+         rdfs:subClassOf :WSignal .
+
+
+###  http://example.com#SelectedBond
+:SelectedBond rdf:type owl:Class ;
+              rdfs:subClassOf :DecodedBond .
+
+
+###  http://example.com#Sender
+:Sender rdf:type owl:Class ;
+        rdfs:subClassOf :Node .
+
+
+###  http://example.com#Signal
+:Signal rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :LogSignal
+                                            :PhySignal
+                                          )
+                            ] ;
+        rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#ULLink
+:ULLink rdf:type owl:Class ;
+        rdfs:subClassOf :DecodedBond .
+
+
+###  http://example.com#ULMedium
+:ULMedium rdf:type owl:Class ;
+          rdfs:subClassOf :LLLink ,
+                          :Medium .
+
+
+###  http://example.com#ULNode
+:ULNode rdf:type owl:Class ;
+        rdfs:subClassOf :Node .
+
+
+###  http://example.com#WSender
+:WSender rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( :MSender
+                                             :SSender
+                                           )
+                             ] ;
+         rdfs:subClassOf :Sender .
+
+
+###  http://example.com#WSignal
+:WSignal rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( :MSignal
+                                             :SSignal
+                                           )
+                             ] ;
+         rdfs:subClassOf :Signal .
+
+
+###  http://example.com#WiFiSignal
+:WiFiSignal rdf:type owl:Class ;
+            rdfs:subClassOf :EMWave ;
+            owl:disjointWith <http://example.com#4GSignal> .
+
+
+###  http://example.com#4GSignal
+<http://example.com#4GSignal> rdf:type owl:Class ;
+                              rdfs:subClassOf :EMWave .
+
+
+###  http://example.com#80211Med
+<http://example.com#80211Med> rdf:type owl:Class ;
+                              rdfs:subClassOf :CommSW .
+
+
+###  http://example.com#80211Phy
+<http://example.com#80211Phy> rdf:type owl:Class ;
+                              rdfs:subClassOf :CommHW .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com#Air
+:Air rdf:type owl:NamedIndividual ,
+              gufo:Kind .
+
+
+###  http://example.com#CoaxialCable
+:CoaxialCable rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://example.com#CommDevice
+:CommDevice rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#CommHW
+:CommHW rdf:type owl:NamedIndividual ,
+                 gufo:Category .
+
+
+###  http://example.com#CommSW
+:CommSW rdf:type owl:NamedIndividual ,
+                 gufo:Category .
+
+
+###  http://example.com#DecodedBond
+:DecodedBond rdf:type owl:NamedIndividual ,
+                      gufo:Category .
+
+
+###  http://example.com#DetectBond
+:DetectBond rdf:type owl:NamedIndividual ,
+                     gufo:Category .
+
+
+###  http://example.com#EMWave
+:EMWave rdf:type owl:NamedIndividual ,
+                 gufo:Category .
+
+
+###  http://example.com#FiberCable
+:FiberCable rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#HTTP
+:HTTP rdf:type owl:NamedIndividual ,
+               gufo:Kind .
+
+
+###  http://example.com#LLLink
+:LLLink rdf:type owl:NamedIndividual ,
+                 gufo:RoleMixin .
+
+
+###  http://example.com#LLMedium
+:LLMedium rdf:type owl:NamedIndividual ,
+                   gufo:RoleMixin .
+
+
+###  http://example.com#LLNode
+:LLNode rdf:type owl:NamedIndividual ,
+                 gufo:RoleMixin .
+
+
+###  http://example.com#LogLink
+:LogLink rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://example.com#LogMedium
+:LogMedium rdf:type owl:NamedIndividual ,
+                    gufo:Category .
+
+
+###  http://example.com#LogNode
+:LogNode rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#LogSignal
+:LogSignal rdf:type owl:NamedIndividual ,
+                    gufo:RoleMixin .
+
+
+###  http://example.com#MSender
+:MSender rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#MSignal
+:MSignal rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#Medium
+:Medium rdf:type owl:NamedIndividual ,
+                 gufo:Category .
+
+
+###  http://example.com#MonitoredBond
+:MonitoredBond rdf:type owl:NamedIndividual ,
+                        gufo:RoleMixin .
+
+
+###  http://example.com#Node
+:Node rdf:type owl:NamedIndividual ,
+               gufo:Category .
+
+
+###  http://example.com#PhyLink
+:PhyLink rdf:type owl:NamedIndividual ,
+                  gufo:Kind .
+
+
+###  http://example.com#PhyMedium
+:PhyMedium rdf:type owl:NamedIndividual ,
+                    gufo:Category .
+
+
+###  http://example.com#PhyNode
+:PhyNode rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#PhySignal
+:PhySignal rdf:type owl:NamedIndividual ,
+                    gufo:RoleMixin .
+
+
+###  http://example.com#Receiver
+:Receiver rdf:type owl:NamedIndividual ,
+                   gufo:RoleMixin .
+
+
+###  http://example.com#SSender
+:SSender rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#SSignal
+:SSignal rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#SelectedBond
+:SelectedBond rdf:type owl:NamedIndividual ,
+                       gufo:RoleMixin .
+
+
+###  http://example.com#Sender
+:Sender rdf:type owl:NamedIndividual ,
+                 gufo:RoleMixin .
+
+
+###  http://example.com#Signal
+:Signal rdf:type owl:NamedIndividual ,
+                 gufo:RoleMixin .
+
+
+###  http://example.com#ULLink
+:ULLink rdf:type owl:NamedIndividual ,
+                 gufo:RoleMixin .
+
+
+###  http://example.com#ULMedium
+:ULMedium rdf:type owl:NamedIndividual ,
+                   gufo:RoleMixin .
+
+
+###  http://example.com#ULNode
+:ULNode rdf:type owl:NamedIndividual ,
+                 gufo:RoleMixin .
+
+
+###  http://example.com#WSender
+:WSender rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#WSignal
+:WSignal rdf:type owl:NamedIndividual ,
+                  gufo:RoleMixin .
+
+
+###  http://example.com#WiFiSignal
+:WiFiSignal rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#ap1
+:ap1 rdf:type owl:NamedIndividual ,
+              :CommDevice .
+
+
+###  http://example.com#ap1-i01
+:ap1-i01 rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Phy> ;
+         :generates :ap1-i01-sgn .
+
+
+###  http://example.com#ap1-i01-sgn
+:ap1-i01-sgn rdf:type owl:NamedIndividual ,
+                      :WiFiSignal ;
+             :bandwidth 20 ;
+             :frequency 2437 ;
+             :power -65 .
+
+
+###  http://example.com#ap2
+:ap2 rdf:type owl:NamedIndividual ,
+              :CommDevice .
+
+
+###  http://example.com#ap2-i01
+:ap2-i01 rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Phy> ;
+         :generates :ap2-i01-sgn .
+
+
+###  http://example.com#ap2-i01-sgn
+:ap2-i01-sgn rdf:type owl:NamedIndividual ,
+                      :WiFiSignal ;
+             :bandwidth 20 ;
+             :frequency 2442 ;
+             :power -72 .
+
+
+###  http://example.com#ap3
+:ap3 rdf:type owl:NamedIndividual ,
+              :CommDevice .
+
+
+###  http://example.com#ap3-i01
+:ap3-i01 rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Phy> ;
+         :generates :ap3-i01-sgn .
+
+
+###  http://example.com#ap3-i01-sgn
+:ap3-i01-sgn rdf:type owl:NamedIndividual ,
+                      :WiFiSignal ;
+             :bandwidth 20 ;
+             :frequency 2447 ;
+             :power -83 .
+
+
+###  http://example.com#decodes
+:decodes rdf:type owl:NamedIndividual ,
+                  gufo:MaterialRelationshipType ;
+         gufo:isDerivedFrom :DecodedBond .
+
+
+###  http://example.com#decodesMSignal
+:decodesMSignal rdf:type owl:NamedIndividual ,
+                         gufo:MaterialRelationshipType ;
+                gufo:isDerivedFrom :MonitoredBond .
+
+
+###  http://example.com#decodesSSignal
+:decodesSSignal rdf:type owl:NamedIndividual ,
+                         gufo:MaterialRelationshipType ;
+                gufo:isDerivedFrom :SelectedBond .
+
+
+###  http://example.com#decodesSignal
+:decodesSignal rdf:type owl:NamedIndividual ,
+                        gufo:MaterialRelationshipType ;
+               gufo:isDerivedFrom :DecodedBond .
+
+
+###  http://example.com#detectsSignal
+:detectsSignal rdf:type owl:NamedIndividual ,
+                        gufo:MaterialRelationshipType ;
+               gufo:isDerivedFrom :DetectBond .
+
+
+###  http://example.com#generates
+:generates rdf:type owl:NamedIndividual ,
+                    gufo:MaterialRelationshipType .
+
+
+###  http://example.com#generatesMSignal
+:generatesMSignal rdf:type owl:NamedIndividual ,
+                           gufo:MaterialRelationshipType .
+
+
+###  http://example.com#generatesSSignal
+:generatesSSignal rdf:type owl:NamedIndividual ,
+                           gufo:MaterialRelationshipType .
+
+
+###  http://example.com#generatesWSignal
+:generatesWSignal rdf:type owl:NamedIndividual ,
+                           gufo:MaterialRelationshipType .
+
+
+###  http://example.com#isServedBy
+:isServedBy rdf:type owl:NamedIndividual ,
+                     gufo:MaterialRelationshipType ;
+            gufo:isDerivedFrom :SelectedBond .
+
+
+###  http://example.com#monitors
+:monitors rdf:type owl:NamedIndividual ,
+                   gufo:MaterialRelationshipType ;
+          gufo:isDerivedFrom :MonitoredBond .
+
+
+###  http://example.com#ue1
+:ue1 rdf:type owl:NamedIndividual ,
+              :CommDevice .
+
+
+###  http://example.com#ue1-ap1
+:ue1-ap1 rdf:type owl:NamedIndividual ,
+                  :SelectedBond ;
+         :bindsMedium <http://example.com#2400band> ;
+         :bindsReceiver :ue1-i01 ;
+         :bindsSignal <http://example.com#2437-20-6> .
+
+
+###  http://example.com#ue1-ap2
+:ue1-ap2 rdf:type owl:NamedIndividual ,
+                  :MonitoredBond ;
+         :bindsMedium <http://example.com#2400band> ;
+         :bindsReceiver :ue1-i01 ;
+         :bindsSignal <http://example.com#2442-20-7> .
+
+
+###  http://example.com#ue1-ap3
+:ue1-ap3 rdf:type owl:NamedIndividual ,
+                  :MonitoredBond ;
+         :bindsMedium <http://example.com#2400band> ;
+         :bindsReceiver :ue1-i01 ;
+         :bindsSignal <http://example.com#2447-20-8> .
+
+
+###  http://example.com#ue1-http
+:ue1-http rdf:type owl:NamedIndividual ,
+                   :HTTP ;
+          :decodesSSignal :ue1-http-pair-sgn ;
+          :requestService :ue1-med .
+
+
+###  http://example.com#ue1-http-pair
+:ue1-http-pair rdf:type owl:NamedIndividual ,
+                        :HTTP ;
+               :generates :ue1-http-pair-sgn .
+
+
+###  http://example.com#ue1-http-pair-sgn
+:ue1-http-pair-sgn rdf:type owl:NamedIndividual ,
+                            :LogSignal .
+
+
+###  http://example.com#ue1-i01
+:ue1-i01 rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Phy> ;
+         :decodesMSignal <http://example.com#2442-20-7> ,
+                         <http://example.com#2447-20-8> ;
+         :decodesSSignal <http://example.com#2437-20-6> .
+
+
+###  http://example.com#ue1-med
+:ue1-med rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Med> ;
+         :decodesSSignal :ue1-med-pair-sgn ;
+         :requestService :ue1-i01 .
+
+
+###  http://example.com#ue1-med-pair
+:ue1-med-pair rdf:type owl:NamedIndividual ,
+                       <http://example.com#80211Med> ;
+              :generates :ue1-med-pair-sgn .
+
+
+###  http://example.com#ue1-med-pair-sgn
+:ue1-med-pair-sgn rdf:type owl:NamedIndividual ,
+                           :LogSignal .
+
+
+###  http://example.com#ue1-ue1pair-http
+:ue1-ue1pair-http rdf:type owl:NamedIndividual ,
+                           :SelectedBond ;
+                  :bindsReceiver :ue1-http ;
+                  :bindsSignal :ue1-http-pair-sgn .
+
+
+###  http://example.com#ue1-ue1pair-med
+:ue1-ue1pair-med rdf:type owl:NamedIndividual ,
+                          :SelectedBond ;
+                 :bindsReceiver :ue1-med ;
+                 :bindsSignal :ue1-med-pair-sgn .
+
+
+###  http://example.com#ue2
+:ue2 rdf:type owl:NamedIndividual ,
+              :CommDevice .
+
+
+###  http://example.com#ue2-ap1
+:ue2-ap1 rdf:type owl:NamedIndividual ,
+                  :MonitoredBond ;
+         :bindsMedium <http://example.com#2400band> ;
+         :bindsReceiver :ue2-i01 ;
+         :bindsSignal <http://example.com#2437-20-6> .
+
+
+###  http://example.com#ue2-ap2
+:ue2-ap2 rdf:type owl:NamedIndividual ,
+                  :SelectedBond ;
+         :bindsMedium <http://example.com#2400band> ;
+         :bindsReceiver :ue2-i01 ;
+         :bindsSignal <http://example.com#2442-20-7> .
+
+
+###  http://example.com#ue2-ap3
+:ue2-ap3 rdf:type owl:NamedIndividual ,
+                  :MonitoredBond ;
+         :bindsMedium <http://example.com#2400band> ;
+         :bindsReceiver :ue2-i01 ;
+         :bindsSignal <http://example.com#2447-20-8> .
+
+
+###  http://example.com#ue2-http
+:ue2-http rdf:type owl:NamedIndividual ,
+                   :HTTP .
+
+
+###  http://example.com#ue2-http-pair
+:ue2-http-pair rdf:type owl:NamedIndividual ,
+                        :HTTP .
+
+
+###  http://example.com#ue2-http-pair-sgn
+:ue2-http-pair-sgn rdf:type owl:NamedIndividual ,
+                            :LogSignal .
+
+
+###  http://example.com#ue2-i01
+:ue2-i01 rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Phy> ;
+         :decodesMSignal <http://example.com#2437-20-6> ,
+                         <http://example.com#2447-20-8> ;
+         :decodesSSignal <http://example.com#2442-20-7> .
+
+
+###  http://example.com#ue2-med
+:ue2-med rdf:type owl:NamedIndividual ,
+                  <http://example.com#80211Med> ;
+         :decodesSSignal :ue2-med-pair-sgn ;
+         :requestService :ue2-i01 .
+
+
+###  http://example.com#ue2-med-pair
+:ue2-med-pair rdf:type owl:NamedIndividual ,
+                       <http://example.com#80211Med> ;
+              :generates :ue2-med-pair-sgn .
+
+
+###  http://example.com#ue2-med-pair-sgn
+:ue2-med-pair-sgn rdf:type owl:NamedIndividual ,
+                           :LogSignal .
+
+
+###  http://example.com#ue2-ue2pair-med
+:ue2-ue2pair-med rdf:type owl:NamedIndividual ,
+                          :SelectedBond ;
+                 :bindsReceiver :ue2-med ;
+                 :bindsSignal :ue2-med-pair-sgn .
+
+
+###  http://example.com#2400band
+<http://example.com#2400band> rdf:type owl:NamedIndividual ,
+                                       :Air .
+
+
+###  http://example.com#2437-20-6
+<http://example.com#2437-20-6> rdf:type owl:NamedIndividual ,
+                                        :WiFiSignal ;
+                               :bandwidth 20 ;
+                               :frequency 2437 ;
+                               :power -65 .
+
+
+###  http://example.com#2442-20-7
+<http://example.com#2442-20-7> rdf:type owl:NamedIndividual ,
+                                        :WiFiSignal ;
+                               :bandwidth 20 ;
+                               :frequency 2442 ;
+                               :power -72 .
+
+
+###  http://example.com#2447-20-8
+<http://example.com#2447-20-8> rdf:type owl:NamedIndividual ,
+                                        :WiFiSignal ;
+                               :bandwidth 20 ;
+                               :frequency 2447 ;
+                               :power -83 .
+
+
+###  http://example.com#4GSignal
+<http://example.com#4GSignal> rdf:type owl:NamedIndividual ,
+                                       gufo:Kind .
+
+
+###  http://example.com#80211Med
+<http://example.com#80211Med> rdf:type owl:NamedIndividual ,
+                                       gufo:Kind .
+
+
+###  http://example.com#80211Phy
+<http://example.com#80211Phy> rdf:type owl:NamedIndividual ,
+                                       gufo:Kind .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Air rdfs:label "Air"@en .
+
+
+:CoaxialCable rdfs:label "CoaxialCable"@en .
+
+
+:CommDevice rdfs:label "CommDevice"@en .
+
+
+:CommHW rdfs:label "CommHW"@en .
+
+
+:CommSW rdfs:label "CommSW"@en .
+
+
+:DecodedBond rdfs:label "DecodedBond"@en .
+
+
+:DetectBond rdfs:label "DetectBond"@en .
+
+
+:EMWave rdfs:label "EMWave"@en .
+
+
+:FiberCable rdfs:label "FiberCable"@en .
+
+
+:HTTP rdfs:label "HTTP"@en .
+
+
+:LLLink rdfs:label "LLLink"@en .
+
+
+:LLMedium rdfs:label "LLMedium"@en .
+
+
+:LLNode rdfs:label "LLNode"@en .
+
+
+:LogLink rdfs:label "LogLink"@en .
+
+
+:LogMedium rdfs:label "LogMedium"@en .
+
+
+:LogNode rdfs:label "LogNode"@en .
+
+
+:LogSignal rdfs:label "LogSignal"@en .
+
+
+:MSender rdfs:label "MSender"@en .
+
+
+:MSignal rdfs:label "MSignal"@en .
+
+
+:Medium rdfs:label "Medium"@en .
+
+
+:MonitoredBond rdfs:label "MonitoredBond"@en .
+
+
+:Node rdfs:label "Node"@en .
+
+
+:PhyLink rdfs:label "PhyLink"@en .
+
+
+:PhyMedium rdfs:label "PhyMedium"@en .
+
+
+:PhyNode rdfs:label "PhyNode"@en .
+
+
+:PhySignal rdfs:label "PhySignal"@en .
+
+
+:Receiver rdfs:label "Receiver"@en .
+
+
+:SSender rdfs:label "SSender"@en .
+
+
+:SSignal rdfs:label "SSignal"@en .
+
+
+:SelectedBond rdfs:label "SelectedBond"@en .
+
+
+:Sender rdfs:label "Sender"@en .
+
+
+:Signal rdfs:label "Signal"@en .
+
+
+:ULLink rdfs:label "ULLink"@en .
+
+
+:ULMedium rdfs:label "ULMedium"@en .
+
+
+:ULNode rdfs:label "ULNode"@en .
+
+
+:WSender rdfs:label "WSender"@en .
+
+
+:WSignal rdfs:label "WSignal"@en .
+
+
+:WiFiSignal rdfs:label "WiFiSignal"@en .
+
+
+:decodes rdfs:label "decodes"@en .
+
+
+:decodesMSignal rdfs:label "decodesMSignal"@en .
+
+
+:decodesSSignal rdfs:label "decodesSSignal"@en .
+
+
+:decodesSignal rdfs:label "decodesSignal"@en .
+
+
+:detectsSignal rdfs:label "detectsSignal"@en .
+
+
+:generates rdfs:label "generates"@en .
+
+
+:generatesMSignal rdfs:label "generatesMSignal"@en .
+
+
+:generatesSSignal rdfs:label "generatesSSignal"@en .
+
+
+:generatesWSignal rdfs:label "generatesWSignal"@en .
+
+
+:isServedBy rdfs:label "isServedBy"@en .
+
+
+:monitors rdfs:label "monitors"@en .
+
+
+<http://example.com#4GSignal> rdfs:label "4GSignal"@en .
+
+
+<http://example.com#80211Med> rdfs:label "80211Med"@en .
+
+
+<http://example.com#80211Phy> rdfs:label "80211Phy"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Air
+                :CoaxialCable
+                :FiberCable
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:phl rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:phm rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:phn rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:un rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:ln rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:llnk rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:lsgn rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:ulnk rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:usgn rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:rcv rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:sgn rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:snd rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:s1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:f1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:s2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:f2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:b1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:b2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PhyLink ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :phl
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LLLink ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :phl
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PhyMedium ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :phm
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LLMedium ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :phm
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :PhyNode ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :phn
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LLNode ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :phn
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S7" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :requestService ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :un ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :ln
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :bindsReceiver ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :llnk ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ln
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :bindsSignal ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :llnk ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :lsgn
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :bindsReceiver ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :ulnk ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :un
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :bindsSignal ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :ulnk ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :usgn
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :decodesSSignal ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :ln ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :lsgn
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :bindsMedium ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :ulnk ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :llnk
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S6" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :decodesMSignal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :rcv ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :sgn
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :generates ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :snd ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :sgn
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :monitors ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :rcv ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :snd
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S5" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :decodesSSignal ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :rcv ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :sgn
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :generates ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :snd ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :sgn
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isServedBy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :rcv ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :snd
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :frequency ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :f1
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :frequency ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :s2 ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :f2
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> ( :f1
+                                                                                                                          :f2
+                                                                                                                        )
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :bandwidth ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :b1
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :bandwidth ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :s2 ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :b2
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> ( :b1
+                                                                                                                                                           :b2
+                                                                                                                                                         )
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#SameIndividualAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :s1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :s2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
