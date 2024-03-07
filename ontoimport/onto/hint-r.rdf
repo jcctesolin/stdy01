@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://purl.org/s2c2/hint#">
         <owl:versionIRI rdf:resource="https://purl.org/s2c2/hint#/0.0.3"/>
-        <owl:imports rdf:resource="https://purl.org/nemo/gufo#/1.0.0"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/gufo-r.rdf"/>
     </owl:Ontology>
     
 
