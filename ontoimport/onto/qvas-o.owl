@@ -17,46 +17,46 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://purl.org/nemo/gufo#/1.0.0</Import>
     <Declaration>
-        <Class IRI="#Configuration"/>
+        <Class IRI="Configuration"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IQVA"/>
+        <Class IRI="IQVA"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MQuality"/>
+        <Class IRI="MQuality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Measurement"/>
+        <Class IRI="Measurement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SQVA"/>
+        <Class IRI="SQVA"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#MQuality"/>
+        <NamedIndividual IRI="MQuality"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#Configuration"/>
+        <Class IRI="Configuration"/>
         <Class abbreviatedIRI="gufo:Participation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IQVA"/>
+        <Class IRI="IQVA"/>
         <Class abbreviatedIRI="gufo:QualityValueAttributionSituation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MQuality"/>
+        <Class IRI="MQuality"/>
         <Class abbreviatedIRI="gufo:Quality"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Measurement"/>
+        <Class IRI="Measurement"/>
         <Class abbreviatedIRI="gufo:Participation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SQVA"/>
+        <Class IRI="SQVA"/>
         <Class abbreviatedIRI="gufo:QualityValueAttributionSituation"/>
     </SubClassOf>
     <ClassAssertion>
         <Class abbreviatedIRI="gufo:EndurantType"/>
-        <NamedIndividual IRI="#MQuality"/>
+        <NamedIndividual IRI="MQuality"/>
     </ClassAssertion>
 </Ontology>
 

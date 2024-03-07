@@ -1,0 +1,1370 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://purl.org/s2c2/hint/"
+     xml:base="https://purl.org/s2c2/hint/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:hint="https://purl.org/s2c2/hint/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://purl.org/s2c2/hint/">
+        <owl:versionIRI rdf:resource="https://purl.org/s2c2/hint/0.0.3"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/gufo-o.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nemo/gufo#isDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/nemo/gufo#isDerivedFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nemo/gufo#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#inheresIn"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#mediates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#mediates"/>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/categorizesVQT -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/categorizesVQT">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#categorizes"/>
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/commDeviceHasInterface -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/commDeviceHasInterface">
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/CommDevice"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/concernsVQT -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/concernsVQT">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#concernsQualityType"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/decodes -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/decodes">
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/WantedSender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/detects -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/detects">
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/Sender"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/handSkakeBondHasSelectedBond -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/handSkakeBondHasSelectedBond">
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/HandSkakeBond"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/SelectedBond"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/handshakes -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/handshakes">
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/Source"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/Sink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/hasPosition -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/hasPosition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/CommDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/isServedBy -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/isServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/s2c2/hint/decodes"/>
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/SelectedSender"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/monitors -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/s2c2/hint/monitors">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/s2c2/hint/decodes"/>
+        <rdfs:domain rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+        <rdfs:range rdf:resource="https://purl.org/s2c2/hint/MonitoredSender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nemo/gufo#hasQualityValue -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/nemo/gufo#hasQualityValue"/>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/hasEndPositionInXSDString -->
+
+    <owl:DatatypeProperty rdf:about="https://purl.org/s2c2/hint/hasEndPositionInXSDString">
+        <rdfs:domain rdf:resource="http://purl.org/nemo/gufo#ConcreteIndividual"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#IntrinsicMode -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Relator -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Relator"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Role -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Role"/>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/AP -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/AP">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Ne"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/AntennaGain -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/AntennaGain">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/AntennaHeight -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/AntennaHeight">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Bandwidth -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Bandwidth">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSignal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Channel -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Channel">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSignal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/CommDevice -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/CommDevice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Coverage -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Coverage">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/DecodedBond -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/DecodedBond">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/MonitoredBond"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/SelectedBond"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/DetectedBond -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/DetectedBond">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Sender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Frequency -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Frequency">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSignal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/HandSkakeBond -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/HandSkakeBond">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Sink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/IPAddress -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/IPAddress">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Information -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Information">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSignal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/InnerNode -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/InnerNode">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Ne"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Interface -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Interface">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Ne"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Ue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Receiver"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Sender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Sink"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Source"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Protocol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Latency -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Latency">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/HandSkakeBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/MAC -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/MAC">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/MonitoredBond -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/MonitoredBond">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/DecodedBond"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/MonitoredSender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/MonitoredSender -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/MonitoredSender">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/WantedSender"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/MonitoredBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Ne -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Ne">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/AP"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/InnerNode"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Position -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Position">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Power -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Power">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSignal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Protocol -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Protocol">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Receiver -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Receiver">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/DecodedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/DetectedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/MonitoredBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/SelectedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/SelectedBond -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/SelectedBond">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/DecodedBond"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/SelectedSender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/SelectedSender -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/SelectedSender">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/WantedSender"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/SelectedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Sender -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Sender">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/UnWantedSender"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/WantedSender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/DetectedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Signal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Signal -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Signal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/UnWantedSignal"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/WantedSignal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Sender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Sink -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Sink">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/HandSkakeBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Source -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Source">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/HandSkakeBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Throughput -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Throughput">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/DecodedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Ue -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/Ue">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/UnWantedSender -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/UnWantedSender">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Sender"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/UnWantedSignal -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/UnWantedSignal">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Signal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/VQualityType -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/VQualityType">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#EndurantType"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/VariantQuality -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/VariantQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/WMode -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/WMode">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VariantQuality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Interface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/WantedSender -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/WantedSender">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/MonitoredSender"/>
+                    <rdf:Description rdf:about="https://purl.org/s2c2/hint/SelectedSender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Sender"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#mediates"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://purl.org/s2c2/hint/DecodedBond"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSignal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/WantedSignal -->
+
+    <owl:Class rdf:about="https://purl.org/s2c2/hint/WantedSignal">
+        <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/WantedSender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://purl.org/s2c2/hint/Information"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/s2c2/hint/AP -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/AP">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/AntennaGain -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/AntennaGain">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/AntennaHeight -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/AntennaHeight">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Bandwidth -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Bandwidth">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Channel -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Channel">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/CommDevice -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/CommDevice">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Coverage -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Coverage">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/DecodedBond -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/DecodedBond">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/DetectedBond -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/DetectedBond">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Frequency -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Frequency">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/HandSkakeBond -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/HandSkakeBond">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/IPAddress -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/IPAddress">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Information -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Information">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/InnerNode -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/InnerNode">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Interface -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Interface">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Latency -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Latency">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/MAC -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/MAC">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/MonitoredBond -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/MonitoredBond">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/MonitoredSender -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/MonitoredSender">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Ne -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Ne">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Power -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Power">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Protocol -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Protocol">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Receiver -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Receiver">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/SelectedBond -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/SelectedBond">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/SelectedSender -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/SelectedSender">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Sender -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Sender">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Signal -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Signal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Sink -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Sink">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Source -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Source">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Throughput -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Throughput">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/Ue -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/Ue">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/UnWantedSender -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/UnWantedSender">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/UnWantedSignal -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/UnWantedSignal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/VariantQuality -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/VariantQuality">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#EndurantType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/WMode -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/WMode">
+        <rdf:type rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/WantedSender -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/WantedSender">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/WantedSignal -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/WantedSignal">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/decodes -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/decodes">
+        <gufo:isDerivedFrom rdf:resource="https://purl.org/s2c2/hint/DecodedBond"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/detects -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/detects">
+        <gufo:isDerivedFrom rdf:resource="https://purl.org/s2c2/hint/DetectedBond"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/handshakes -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/handshakes">
+        <gufo:isDerivedFrom rdf:resource="https://purl.org/s2c2/hint/HandSkakeBond"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/isServedBy -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/isServedBy">
+        <gufo:isDerivedFrom rdf:resource="https://purl.org/s2c2/hint/SelectedBond"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/s2c2/hint/monitors -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/s2c2/hint/monitors">
+        <gufo:isDerivedFrom rdf:resource="https://purl.org/s2c2/hint/MonitoredBond"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/AP">
+        <rdfs:label xml:lang="en">AP</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/CommDevice">
+        <rdfs:label xml:lang="en">CommDevice</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/DecodedBond">
+        <rdfs:label xml:lang="en">DecodedBond</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/DetectedBond">
+        <rdfs:label xml:lang="en">DetectedBond</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/HandSkakeBond">
+        <rdfs:label xml:lang="en">HandSkakeBond</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Information">
+        <rdfs:label xml:lang="en">Information</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/InnerNode">
+        <rdfs:label xml:lang="en">InnerNode</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Interface">
+        <rdfs:label xml:lang="en">Interface</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/MonitoredBond">
+        <rdfs:label xml:lang="en">MonitoredBond</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/MonitoredSender">
+        <rdfs:label xml:lang="en">MonitoredSender</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Ne">
+        <rdfs:label xml:lang="en">Ne</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Protocol">
+        <rdfs:label xml:lang="en">Protocol</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Receiver">
+        <rdfs:label xml:lang="en">Receiver</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/SelectedBond">
+        <rdfs:label xml:lang="en">SelectedBond</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/SelectedSender">
+        <rdfs:label xml:lang="en">SelectedSender</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Sender">
+        <rdfs:label xml:lang="en">Sender</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Signal">
+        <rdfs:label xml:lang="en">Signal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Sink">
+        <rdfs:label xml:lang="en">Sink</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Source">
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/Ue">
+        <rdfs:label xml:lang="en">Ue</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/UnWantedSender">
+        <rdfs:label xml:lang="en">UnWantedSender</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/UnWantedSignal">
+        <rdfs:label xml:lang="en">UnWantedSignal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/WantedSender">
+        <rdfs:label xml:lang="en">WantedSender</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/WantedSignal">
+        <rdfs:label xml:lang="en">WantedSignal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/decodes">
+        <rdfs:label xml:lang="en">decodes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/detects">
+        <rdfs:label xml:lang="en">detects</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/handshakes">
+        <rdfs:label xml:lang="en">handshakes</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/isServedBy">
+        <rdfs:label xml:lang="en">is served by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://purl.org/s2c2/hint/monitors">
+        <rdfs:label xml:lang="en">monitors</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
