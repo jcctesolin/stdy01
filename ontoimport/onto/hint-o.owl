@@ -1,0 +1,1268 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://purl.org/s2c2/hint"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://purl.org/s2c2/hint"
+     versionIRI="https://purl.org/s2c2/hint#/0.0.3">
+    <Prefix name="" IRI="https://purl.org/s2c2/hint#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
+    <Prefix name="hint" IRI="https://purl.org/s2c2/hint#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <!--<Import>https://purl.org/nemo/gufo#/1.0.0</Import>-->
+    <Declaration>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Kind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AntennaGain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AntennaHeight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Bandwidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Channel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CommDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Coverage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DecodedBond"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DetectedBond"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Frequency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="HandSkakeBond"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="IPAddress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InnerNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Latency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MAC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MonitoredBond"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="MonitoredSender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Ne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Power"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Protocol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Receiver"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SelectedBond"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SelectedSender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Signal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Throughput"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Ue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnWantedSender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="UnWantedSignal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VQualityType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="VariantQuality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WMode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WantedSender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WantedSignal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="categorizesVQT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="commDeviceHasInterface"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="concernsVQT"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="decodes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="detects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="handSkakeBondHasSelectedBond"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="handshakes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPosition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isServedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="monitors"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasEndPositionInXSDString"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AP"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AntennaGain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AntennaHeight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Bandwidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Channel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CommDevice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Coverage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DecodedBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="DetectedBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Frequency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HandSkakeBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="IPAddress"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Information"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="InnerNode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Interface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Latency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MAC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MonitoredBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MonitoredSender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Ne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Power"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Protocol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Receiver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SelectedBond"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SelectedSender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Signal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Sink"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Source"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Throughput"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Ue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="UnWantedSender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="UnWantedSignal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="VariantQuality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WantedSender"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WantedSignal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="decodes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="detects"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="handshakes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="isServedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="monitors"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="gufo:isDerivedFrom"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="DecodedBond"/>
+        <ObjectUnionOf>
+            <Class IRI="MonitoredBond"/>
+            <Class IRI="SelectedBond"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Interface"/>
+        <ObjectUnionOf>
+            <Class IRI="Ne"/>
+            <Class IRI="Ue"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Interface"/>
+        <ObjectUnionOf>
+            <Class IRI="Receiver"/>
+            <Class IRI="Sender"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Interface"/>
+        <ObjectUnionOf>
+            <Class IRI="Sink"/>
+            <Class IRI="Source"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Ne"/>
+        <ObjectUnionOf>
+            <Class IRI="AP"/>
+            <Class IRI="InnerNode"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Sender"/>
+        <ObjectUnionOf>
+            <Class IRI="UnWantedSender"/>
+            <Class IRI="WantedSender"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Signal"/>
+        <ObjectUnionOf>
+            <Class IRI="UnWantedSignal"/>
+            <Class IRI="WantedSignal"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="WantedSender"/>
+        <ObjectUnionOf>
+            <Class IRI="MonitoredSender"/>
+            <Class IRI="SelectedSender"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="AP"/>
+        <Class IRI="Ne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AntennaGain"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AntennaGain"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AntennaHeight"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AntennaHeight"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bandwidth"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Bandwidth"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="WantedSignal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Channel"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Channel"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="WantedSignal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CommDevice"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coverage"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Coverage"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DecodedBond"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DecodedBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Receiver"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DecodedBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="WantedSender"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DetectedBond"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DetectedBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Receiver"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DetectedBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Sender"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Frequency"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Frequency"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="WantedSignal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HandSkakeBond"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HandSkakeBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Sink"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="HandSkakeBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Source"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPAddress"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="IPAddress"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Information"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Information"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="WantedSignal"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InnerNode"/>
+        <Class IRI="Ne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interface"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interface"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="Protocol"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Latency"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Latency"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="HandSkakeBond"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MAC"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MAC"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MonitoredBond"/>
+        <Class IRI="DecodedBond"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MonitoredBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="MonitoredSender"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MonitoredBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Receiver"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MonitoredSender"/>
+        <Class IRI="WantedSender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="MonitoredSender"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="MonitoredBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Ne"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Position"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Power"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Power"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="WantedSignal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Protocol"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Protocol"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Receiver"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Receiver"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="DecodedBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Receiver"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="DetectedBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Receiver"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="MonitoredBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Receiver"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="SelectedBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SelectedBond"/>
+        <Class IRI="DecodedBond"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SelectedBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="Receiver"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SelectedBond"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="SelectedSender"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SelectedSender"/>
+        <Class IRI="WantedSender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SelectedSender"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="SelectedBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sender"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sender"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="DetectedBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sender"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="Signal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Signal"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Signal"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Sender"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sink"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sink"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="HandSkakeBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Source"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Source"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="HandSkakeBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Throughput"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Throughput"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="DecodedBond"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Ue"/>
+        <Class IRI="Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnWantedSender"/>
+        <Class IRI="Sender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="UnWantedSignal"/>
+        <Class IRI="Signal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VQualityType"/>
+        <Class abbreviatedIRI="gufo:EndurantType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="VariantQuality"/>
+        <Class abbreviatedIRI="gufo:Quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WMode"/>
+        <Class IRI="VariantQuality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WMode"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="Interface"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WantedSender"/>
+        <Class IRI="Sender"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WantedSender"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="DecodedBond"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WantedSender"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="WantedSignal"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WantedSignal"/>
+        <Class IRI="Signal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WantedSignal"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="WantedSender"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WantedSignal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="Information"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="AP"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="AntennaGain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="AntennaHeight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Bandwidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Channel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="CommDevice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Coverage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="DecodedBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="DetectedBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Frequency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="HandSkakeBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="IPAddress"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="Information"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="InnerNode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="Interface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Latency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="MAC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="MonitoredBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="MonitoredSender"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="Ne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Power"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="Protocol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="Receiver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="SelectedBond"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="SelectedSender"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="Sender"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="Signal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="Sink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="Source"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="Throughput"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="Ue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="UnWantedSender"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="UnWantedSignal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:EndurantType"/>
+        <NamedIndividual IRI="VariantQuality"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="VQualityType"/>
+        <NamedIndividual IRI="WMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="WantedSender"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="WantedSignal"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:isDerivedFrom"/>
+        <NamedIndividual IRI="decodes"/>
+        <NamedIndividual IRI="DecodedBond"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:isDerivedFrom"/>
+        <NamedIndividual IRI="detects"/>
+        <NamedIndividual IRI="DetectedBond"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:isDerivedFrom"/>
+        <NamedIndividual IRI="handshakes"/>
+        <NamedIndividual IRI="HandSkakeBond"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:isDerivedFrom"/>
+        <NamedIndividual IRI="isServedBy"/>
+        <NamedIndividual IRI="SelectedBond"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="gufo:isDerivedFrom"/>
+        <NamedIndividual IRI="monitors"/>
+        <NamedIndividual IRI="MonitoredBond"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="categorizesVQT"/>
+        <ObjectProperty abbreviatedIRI="gufo:categorizes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="concernsVQT"/>
+        <ObjectProperty abbreviatedIRI="gufo:concernsQualityType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPosition"/>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isServedBy"/>
+        <ObjectProperty IRI="decodes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="monitors"/>
+        <ObjectProperty IRI="decodes"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="categorizesVQT"/>
+        <Class IRI="VQualityType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="commDeviceHasInterface"/>
+        <Class IRI="CommDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="decodes"/>
+        <Class IRI="Receiver"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="detects"/>
+        <Class IRI="Sender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="handSkakeBondHasSelectedBond"/>
+        <Class IRI="HandSkakeBond"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="handshakes"/>
+        <Class IRI="Source"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPosition"/>
+        <Class IRI="CommDevice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isServedBy"/>
+        <Class IRI="SelectedSender"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="monitors"/>
+        <Class IRI="Receiver"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="categorizesVQT"/>
+        <Class IRI="VariantQuality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="commDeviceHasInterface"/>
+        <Class IRI="Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="concernsVQT"/>
+        <Class IRI="VariantQuality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="decodes"/>
+        <Class IRI="WantedSender"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="detects"/>
+        <Class IRI="Receiver"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="handSkakeBondHasSelectedBond"/>
+        <Class IRI="SelectedBond"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="handshakes"/>
+        <Class IRI="Sink"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isServedBy"/>
+        <Class IRI="Receiver"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="monitors"/>
+        <Class IRI="MonitoredSender"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasEndPositionInXSDString"/>
+        <Class abbreviatedIRI="gufo:ConcreteIndividual"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="hasEndPositionInXSDString"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AP</IRI>
+        <Literal xml:lang="en">AP</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CommDevice</IRI>
+        <Literal xml:lang="en">CommDevice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DecodedBond</IRI>
+        <Literal xml:lang="en">DecodedBond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>DetectedBond</IRI>
+        <Literal xml:lang="en">DetectedBond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>HandSkakeBond</IRI>
+        <Literal xml:lang="en">HandSkakeBond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Information</IRI>
+        <Literal xml:lang="en">Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>InnerNode</IRI>
+        <Literal xml:lang="en">InnerNode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Interface</IRI>
+        <Literal xml:lang="en">Interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MonitoredBond</IRI>
+        <Literal xml:lang="en">MonitoredBond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MonitoredSender</IRI>
+        <Literal xml:lang="en">MonitoredSender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Ne</IRI>
+        <Literal xml:lang="en">Ne</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Protocol</IRI>
+        <Literal xml:lang="en">Protocol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Receiver</IRI>
+        <Literal xml:lang="en">Receiver</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SelectedBond</IRI>
+        <Literal xml:lang="en">SelectedBond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SelectedSender</IRI>
+        <Literal xml:lang="en">SelectedSender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sender</IRI>
+        <Literal xml:lang="en">Sender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Signal</IRI>
+        <Literal xml:lang="en">Signal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sink</IRI>
+        <Literal xml:lang="en">Sink</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Source</IRI>
+        <Literal xml:lang="en">Source</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Ue</IRI>
+        <Literal xml:lang="en">Ue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnWantedSender</IRI>
+        <Literal xml:lang="en">UnWantedSender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UnWantedSignal</IRI>
+        <Literal xml:lang="en">UnWantedSignal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WantedSender</IRI>
+        <Literal xml:lang="en">WantedSender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WantedSignal</IRI>
+        <Literal xml:lang="en">WantedSignal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>decodes</IRI>
+        <Literal xml:lang="en">decodes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>detects</IRI>
+        <Literal xml:lang="en">detects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>handshakes</IRI>
+        <Literal xml:lang="en">handshakes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isServedBy</IRI>
+        <Literal xml:lang="en">is served by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>monitors</IRI>
+        <Literal xml:lang="en">monitors</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

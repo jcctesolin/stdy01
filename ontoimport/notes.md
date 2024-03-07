@@ -1,0 +1,3 @@
+- problemas com hintv3-orev.owl -> faltava linha da base **Prefix name=""**
+- o problema da importação é que geralmente as ontologias são disponibilizadas em Turtle (ttl), que não é suportada pelo owlready2. por isso dá erro no parsing
+- pq usar o formato OWL/XML e não o RDF/XML ?
