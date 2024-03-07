@@ -18,7 +18,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <!--<Import>https://purl.org/nemo/gufo#/1.0.0</Import>-->
+    <Import>https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/gufo-o.owl</Import>
     <Declaration>
         <Class abbreviatedIRI="gufo:FunctionalComplex"/>
     </Declaration>
