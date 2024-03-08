@@ -8,6 +8,8 @@
 
 <owl:Ontology rdf:about="http://example.org/ex01">
   <owl:imports rdf:resource="http://purl.org/nemo/gufo"/>
+  <owl:imports rdf:resource="https://purl.org/s2c2/miscon"/>
+  <owl:imports rdf:resource="https://purl.org/s2c2/hint"/>
 </owl:Ontology>
 
 
