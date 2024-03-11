@@ -16,8 +16,8 @@
      xmlns:miscon="https://purl.org/s2c2/miscon/">
     <Ontology rdf:about="https://purl.org/s2c2/miscon/">
         <versionIRI rdf:resource="https://purl.org/s2c2/miscon/0.0.1"/>
-        <imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/hintv3-r.rdf"/>
-        <imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/gufo-r.rdf"/>
+        <!--<imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/hintv3-r.rdf"/>
+        <imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/gufo-r.rdf"/>-->
     </Ontology>
     
 
