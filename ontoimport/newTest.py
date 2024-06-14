@@ -22,9 +22,10 @@ def create():
 
     # Instances
     with new_onto:    
-        base_onto.MilitaryPerson("m1")
-        network_base_onto.CommDevice("cd01")
-        measure_base_onto.SQVA("sqva01")
+        mp= base_onto.MilitaryPerson("m1")
+        cd= network_base_onto.CommDevice("cd01")
+        meas = measure_base_onto.SQVA("sqva01")
+        mp.carries.append(cd)
         sync_reasoner_pellet(infer_property_values=True, infer_data_property_values = True)
     
     new_onto.save(format = "rdfxml")
