@@ -16,7 +16,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://myontology.com/scenario">
-        <owl:imports rdf:resource="http://purl.org/nemo/gufo#/1.0.0"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/gufo-o.owl"/>
         <rdfs:comment>The MiScOn ontology presents modeling that connects the military environment with the communication environment, reusing other ontologies, providing semantic reasoning with information about the behavior of communication between military personnel in an operational scenario.
 
 The MiScOn ontology represents concepts related to the Brazilian Armed Forces, but represents concepts in English. Therefore, if necessary, the translation can be done easily using translation tools or dictionaries. With the correct translation, the terms represented should not present interoperability problems with the terms used by the Armed Forces&apos; C2 systems.</rdfs:comment>
