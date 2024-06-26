@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://newScenario.owl"
+         xmlns="file://newScenario.owl#"
+         xmlns:scen="http://myontology.com/scenario#">
+
+<owl:Ontology rdf:about="file://newScenario.owl">
+  <owl:imports rdf:resource="http://myontology.com/scenario"/>
+  <owl:imports rdf:resource="https://purl.org/s2c2/hint"/>
+  <owl:imports rdf:resource="https://purl.org/s2c2/qvas"/>
+</owl:Ontology>
+
+<owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#python_module">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <scen:isLocatedIn rdf:resource="#Urutu0"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#python_name">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <scen:isLocatedIn rdf:resource="#Urutu0"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#first">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <scen:isLocatedIn rdf:resource="#Urutu1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <scen:isLocatedIn rdf:resource="#Urutu1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <scen:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <scen:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#domain">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <scen:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#range">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <scen:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#8BTW3"/>
+  <scen:isLocatedIn rdf:resource="#Urutu3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="http://www.w3.org/2002/07/owl#Class">
+  <rdf:type rdf:resource="http://myontology.com/scenario#MilitaryPerson"/>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#8BTW3"/>
+  <scen:isLocatedIn rdf:resource="#Urutu3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1PL">
+  <rdf:type rdf:resource="http://myontology.com/scenario#Platoon"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2PL">
+  <rdf:type rdf:resource="http://myontology.com/scenario#Platoon"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1BT">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#1PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2BT">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#1PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3BT">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#1PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#4BT">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#2PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#5BT">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#2PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#6BT">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#1PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#8BTW3">
+  <rdf:type rdf:resource="http://myontology.com/scenario#BattleGroup"/>
+  <scen:isSubordinateTo rdf:resource="#2PL"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Urutu0">
+  <rdf:type rdf:resource="http://myontology.com/scenario#Urutu"/>
+  <scen:belongsTo rdf:resource="#1BT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Urutu1">
+  <rdf:type rdf:resource="http://myontology.com/scenario#Urutu"/>
+  <scen:belongsTo rdf:resource="#1BT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Guarani2">
+  <rdf:type rdf:resource="http://myontology.com/scenario#Guarani"/>
+  <scen:belongsTo rdf:resource="#6BT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Urutu3">
+  <rdf:type rdf:resource="http://myontology.com/scenario#Urutu"/>
+  <scen:belongsTo rdf:resource="#8BTW3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cd01">
+  <rdf:type rdf:resource="https://purl.org/s2c2/hint/CommDevice"/>
+</owl:NamedIndividual>
+
+<scen:MilitaryPerson>
+  <scen:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <scen:isLocatedIn rdf:resource="#Urutu0"/>
+</scen:MilitaryPerson>
+
+
+</rdf:RDF>
