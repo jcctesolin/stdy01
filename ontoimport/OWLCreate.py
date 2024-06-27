@@ -6,7 +6,6 @@ FILE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 def create_instance_file(instanciate_items:list): 
     try:
-        #base_onto = get_ontology("https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/miscon-r2.rdf").load()
         base_onto = get_ontology("https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon").load()
         network_base_onto =  get_ontology("https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/hint").load() # ontologia de rede (Julio)
         measure_base_onto =  get_ontology("https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/qvas").load() # ontologia de rede (Julio)
@@ -22,6 +21,9 @@ def create_instance_file(instanciate_items:list):
     # Instances 
     with new_onto:
         
+        aux_om_separator = ""
+        count_devices_network = 0
+        
         for item in instanciate_items:
             if 'nameOverlord' in item: # MO Root
                 print(item)
@@ -36,30 +38,32 @@ def create_instance_file(instanciate_items:list):
                     platform.belongsTo = [getattr(new_onto, item['nameMO'])]
                     
                 else: # Military
-                    device = network_base_onto.CommDevice("cd01") ## Adicionar interfaces para o primeiro militar de cada OM.
-                    
                     if 'byFoot' in item:
-                        military = base_onto.MilitaryPerson(item['id'])
+
+                        #military = base_onto.MilitaryPerson(item['id'])
+                        military = base_onto.MilitaryPerson("m"+str(item['id']))
                         military.militaryPersonHasMilitaryOrganization = [getattr(new_onto, item['nameMO'])]
+                        
+                        if aux_om_separator == "" or aux_om_separator != item["nameMO"]: # Verifica se é o primeiro militar da OM (Comandante)
+                            device = network_base_onto.CommDevice("cd"+str(count_devices_network))
+                            #device = base_onto.CommDevice("cd"+str(count_devices_network))
+                            aux_om_separator = item["nameMO"]
+                            military.carries = [device]
+                            commander = military
+                            print(f"O militar {item['id']} possui o device: {device}")
+                            count_devices_network+=1
+                        else:
+                            military.militaryPersonIsSubordinateTo = [commander]
                         
                         
                         if item['byFoot'] == False:
                             military.isLocatedIn = [getattr(new_onto, (item['typePlatform']+str(item['platformId'])))]
-                            
                         else:
                             continue
                                          
             
-    sync_reasoner_pellet(infer_property_values=True, infer_data_property_values = True)
+    sync_reasoner_pellet(infer_property_values=True, infer_data_property_values = True, debug=2)
     new_onto.save(format = "rdfxml")
-    
-def load(owl_file_name: str) -> list:
-    print("\n\n\n\n\n-------------> LENDO ARQUIVOS <--------------------")
-    current_instance_file = get_ontology(f"{FILE_PATH}/{owl_file_instance_name}.owl").load()
-    
-    with current_instance_file:
-        for property in current_instance_file.imported_ontologies: # AQUI da pra filtrar por tudo que quiseres consultar
-            print(property)
             
 if __name__ == "__main__":        
     create_instance_file(
@@ -91,4 +95,3 @@ if __name__ == "__main__":
          {'id': 11, 'nameMO': '8BTW3', 'typeMO': 'BattleGroup', 'typePlatform': 'Urutu', 'platformId': 3, 'byFoot': False},
          ]
      )
-    load(owl_file_instance_name)
