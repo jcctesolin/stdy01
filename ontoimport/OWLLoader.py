@@ -6,8 +6,7 @@ FILE_PATH = os.path.dirname(os.path.abspath(__file__))
 def loadOwlInstancesFile(filename):
     
     ref_onto = get_ontology(f"{FILE_PATH}/{filename}").load()
-#   ref_onto_imported = ref_onto.imported_ontologies[0]
-    
+     
     militaryList = []
     indvs = []
 
