@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file:///home/dev/workdir/stdy01/ontoimport/ScenarioNewWithHint.owl"
+         xmlns="file:///home/dev/workdir/stdy01/ontoimport/ScenarioNewWithHint.owl#"
+         xmlns:gufo="http://purl.org/nemo/gufo#"
+         xmlns:misc="https://purl.org/s2c2/miscon#"
+         xmlns:hint="https://purl.org/s2c2/hint/">
+
+<owl:Ontology rdf:about="file:///home/dev/workdir/stdy01/ontoimport/ScenarioNewWithHint.owl">
+  <owl:imports rdf:resource="https://purl.org/s2c2/miscon"/>
+  <owl:imports rdf:resource="https://purl.org/s2c2/hint"/>
+  <owl:imports rdf:resource="https://purl.org/s2c2/qvas"/>
+</owl:Ontology>
+
+<owl:NamedIndividual rdf:about="#m1">
+  <rdf:type rdf:resource="https://purl.org/s2c2/miscon#MilitaryPerson"/>
+  <misc:carries rdf:resource="#cd01"/>
+  <rdf:type rdf:resource="https://purl.org/s2c2/miscon#CommDeviceCarrier"/>
+  <rdf:type rdf:resource="https://purl.org/s2c2/miscon#MilitaryPersonAsDismounted"/>
+  <misc:visibilityRange rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</misc:visibilityRange>
+  <misc:maxSpeedLand rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.11111</misc:maxSpeedLand>
+  <misc:minSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.277778</misc:minSpeed>
+  <gufo:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</gufo:hasQualityValue>
+  <gufo:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.277778</gufo:hasQualityValue>
+  <gufo:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.11111</gufo:hasQualityValue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cd01">
+  <rdf:type rdf:resource="https://purl.org/s2c2/hint/CommDevice"/>
+  <rdf:type rdf:resource="https://purl.org/s2c2/miscon#CommDevice"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sqva01">
+  <rdf:type rdf:resource="https://purl.org/s2c2/qvas#SQVA"/>
+</owl:NamedIndividual>
+
+<gufo:FunctionalComplex rdf:about="https://purl.org/s2c2/miscon#CommDeviceCarrier"/>
+
+<gufo:IntrinsicMode rdf:about="https://purl.org/s2c2/miscon#Protocol"/>
+
+<gufo:FunctionalComplex rdf:about="https://purl.org/s2c2/miscon#Interface"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#MilitaryPlatform">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Category"/>
+</rdf:Description>
+
+<misc:InstitutionalElement rdf:about="https://purl.org/s2c2/miscon#MilitaryOrganization"/>
+
+<misc:OperationalElement rdf:about="https://purl.org/s2c2/miscon#CommDevice"/>
+
+<misc:MilitaryOrganization rdf:about="https://purl.org/s2c2/miscon#HierarchicallyEquivalent"/>
+
+<misc:MilitaryPerson rdf:about="https://purl.org/s2c2/miscon#MilitaryPersonAsPassenger"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Vehicle">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Category"/>
+</rdf:Description>
+
+<misc:MilitaryOrganization rdf:about="https://purl.org/s2c2/miscon#Subordinate"/>
+
+<misc:MilitaryOrganization rdf:about="https://purl.org/s2c2/miscon#Commander"/>
+
+<misc:Interface rdf:about="https://purl.org/s2c2/miscon#Ue"/>
+
+<misc:OperationalElement rdf:about="https://purl.org/s2c2/miscon#MilitaryPerson">
+  <rdf:type rdf:resource="https://purl.org/s2c2/miscon#Person"/>
+</misc:OperationalElement>
+
+<misc:MilitaryPerson rdf:about="https://purl.org/s2c2/miscon#SubordinateMilitaryPerson"/>
+
+<misc:MilitaryPerson rdf:about="https://purl.org/s2c2/miscon#CommanderMilitaryPerson"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#OperationalElement">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Category"/>
+</rdf:Description>
+
+<misc:OperationalElement rdf:about="https://purl.org/s2c2/miscon#WirelessNetwork"/>
+
+<misc:MilitaryPerson rdf:about="https://purl.org/s2c2/miscon#UeOperator"/>
+
+<misc:Vehicle rdf:about="https://purl.org/s2c2/miscon#Armored"/>
+
+<misc:Interface rdf:about="https://purl.org/s2c2/miscon#AccessPoint"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Battalion">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#MilitaryOrganizationPowerType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#BattleGroup">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#MilitaryOrganizationPowerType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Brigade">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#MilitaryOrganizationPowerType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Cascavel">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#VehiclePowerType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Company">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#MilitaryOrganizationPowerType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Guarani">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#VehiclePowerType"/>
+</rdf:Description>
+
+<gufo:FunctionalComplex rdf:about="https://purl.org/s2c2/miscon#Person"/>
+
+<misc:MilitaryPerson rdf:about="https://purl.org/s2c2/miscon#MilitaryPersonAsDismounted"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Platoon">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#MilitaryOrganizationPowerType"/>
+</rdf:Description>
+
+<misc:Ue rdf:about="https://purl.org/s2c2/miscon#UeDown"/>
+
+<misc:Ue rdf:about="https://purl.org/s2c2/miscon#UeInternDown"/>
+
+<misc:Ue rdf:about="https://purl.org/s2c2/miscon#UeUp"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#Urutu">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/miscon#VehiclePowerType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#scenario1">
+  <misc:militaryScenarioHasOperationalElement rdf:resource="https://purl.org/s2c2/miscon#net1"/>
+  <misc:militaryScenarioHasOperationalElement rdf:resource="https://purl.org/s2c2/miscon#sta7"/>
+  <misc:militaryScenarioHasOperationalElement rdf:resource="#cd01"/>
+  <misc:militaryScenarioHasOperationalElement rdf:resource="#m1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/miscon#sta7">
+  <gufo:hasQualityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:00:00:00:00:08</gufo:hasQualityValue>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/VariantQuality">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#EndurantType"/>
+</rdf:Description>
+
+<gufo:FunctionalComplex rdf:about="https://purl.org/s2c2/hint/CommDevice"/>
+
+<misc:CommDeviceCarrier rdf:about="https://purl.org/s2c2/hint/Interface"/>
+
+<owl:Thing rdf:about="https://purl.org/s2c2/hint/decodes"/>
+
+<hint:Interface rdf:about="https://purl.org/s2c2/hint/Receiver"/>
+
+<hint:Sender rdf:about="https://purl.org/s2c2/hint/WantedSender"/>
+
+<owl:Thing rdf:about="https://purl.org/s2c2/hint/detects"/>
+
+<hint:Interface rdf:about="https://purl.org/s2c2/hint/Sender"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/HandSkakeBond">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+</rdf:Description>
+
+<hint:DecodedBond rdf:about="https://purl.org/s2c2/hint/SelectedBond"/>
+
+<owl:Thing rdf:about="https://purl.org/s2c2/hint/handshakes"/>
+
+<hint:Interface rdf:about="https://purl.org/s2c2/hint/Source"/>
+
+<hint:Interface rdf:about="https://purl.org/s2c2/hint/Sink"/>
+
+<owl:Thing rdf:about="https://purl.org/s2c2/hint/isServedBy"/>
+
+<hint:WantedSender rdf:about="https://purl.org/s2c2/hint/SelectedSender"/>
+
+<owl:Thing rdf:about="https://purl.org/s2c2/hint/monitors"/>
+
+<hint:WantedSender rdf:about="https://purl.org/s2c2/hint/MonitoredSender"/>
+
+<hint:Ne rdf:about="https://purl.org/s2c2/hint/AP"/>
+
+<hint:Interface rdf:about="https://purl.org/s2c2/hint/Ne"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/AntennaGain">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/AntennaHeight">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Bandwidth">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<misc:CommDeviceCarrier rdf:about="https://purl.org/s2c2/hint/WantedSignal">
+  <rdf:type rdf:resource="https://purl.org/s2c2/hint/Signal"/>
+</misc:CommDeviceCarrier>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Channel">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Coverage">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/DecodedBond">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+</rdf:Description>
+
+<hint:DecodedBond rdf:about="https://purl.org/s2c2/hint/MonitoredBond"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/DetectedBond">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Frequency">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/IPAddress">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<gufo:IntrinsicMode rdf:about="https://purl.org/s2c2/hint/Information"/>
+
+<hint:Ne rdf:about="https://purl.org/s2c2/hint/InnerNode"/>
+
+<hint:Interface rdf:about="https://purl.org/s2c2/hint/Ue"/>
+
+<gufo:IntrinsicMode rdf:about="https://purl.org/s2c2/hint/Protocol"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Latency">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/MAC">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Power">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<hint:Sender rdf:about="https://purl.org/s2c2/hint/UnWantedSender"/>
+
+<gufo:IntrinsicMode rdf:about="https://purl.org/s2c2/hint/Signal"/>
+
+<hint:Signal rdf:about="https://purl.org/s2c2/hint/UnWantedSignal"/>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/Throughput">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/hint/WMode">
+  <rdfs:subClassOf rdf:resource="https://purl.org/s2c2/hint/VQualityType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://purl.org/s2c2/qvas#MQuality">
+  <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#EndurantType"/>
+</rdf:Description>
+
+
+</rdf:RDF>
