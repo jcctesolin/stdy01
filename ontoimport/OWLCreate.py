@@ -6,9 +6,10 @@ FILE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 def create_instance_file(instanciate_items:list): 
     try:
-        base_onto = get_ontology("https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/miscon-r.rdf").load()
-        network_base_onto =  get_ontology("https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/hintv3-r.rdf").load() # ontologia de rede (Julio)
-        measure_base_onto =  get_ontology("https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/qvas-r.rdf").load() # ontologia de rede (Julio)
+        #base_onto = get_ontology("https://raw.githubusercontent.com/jcctesolin/stdy01/dev/ontoimport/onto/miscon-r2.rdf").load()
+        base_onto = get_ontology("https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon").load()
+        network_base_onto =  get_ontology("https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/hint").load() # ontologia de rede (Julio)
+        measure_base_onto =  get_ontology("https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/qvas").load() # ontologia de rede (Julio)
     except Exception as e:
         print(f"Exceção é: {e}")
 
