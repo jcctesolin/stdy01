@@ -1,6 +1,5 @@
 from owlready2 import *
 
-#owl_file_instance_name = "newScenario"
 owl_file_instance_name = "newScenario"
 
 FILE_PATH = os.path.dirname(os.path.abspath(__file__))
