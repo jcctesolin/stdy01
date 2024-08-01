@@ -13,71 +13,6 @@
   <owl:imports rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/qvas"/>
 </owl:Ontology>
 
-<owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#python_module">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
-  <misc:isLocatedIn rdf:resource="#Urutu0"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#python_name">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
-  <misc:isLocatedIn rdf:resource="#Urutu0"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#first">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
-  <misc:isLocatedIn rdf:resource="#Urutu1"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
-  <misc:isLocatedIn rdf:resource="#Urutu1"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
-  <misc:isLocatedIn rdf:resource="#Guarani2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
-  <misc:isLocatedIn rdf:resource="#Guarani2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#domain">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
-  <misc:isLocatedIn rdf:resource="#Guarani2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#range">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
-  <misc:isLocatedIn rdf:resource="#Guarani2"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#8BTW3"/>
-  <misc:isLocatedIn rdf:resource="#Urutu3"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="http://www.w3.org/2002/07/owl#Class">
-  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
-  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#8BTW3"/>
-  <misc:isLocatedIn rdf:resource="#Urutu3"/>
-</owl:NamedIndividual>
-
 <owl:NamedIndividual rdf:about="#1PL">
   <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#Platoon"/>
 </owl:NamedIndividual>
@@ -141,14 +76,100 @@
   <misc:belongsTo rdf:resource="#8BTW3"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#cd01">
+<owl:NamedIndividual rdf:about="#m0">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <misc:carries rdf:resource="#cd0"/>
+  <misc:isLocatedIn rdf:resource="#Urutu0"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cd0">
   <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/hint#CommDevice"/>
 </owl:NamedIndividual>
 
-<misc:MilitaryPerson>
+<owl:NamedIndividual rdf:about="#m1">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
   <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m0"/>
   <misc:isLocatedIn rdf:resource="#Urutu0"/>
-</misc:MilitaryPerson>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m2">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m0"/>
+  <misc:isLocatedIn rdf:resource="#Urutu0"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m3">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m0"/>
+  <misc:isLocatedIn rdf:resource="#Urutu1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m4">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#1BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m0"/>
+  <misc:isLocatedIn rdf:resource="#Urutu1"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m5">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <misc:carries rdf:resource="#cd1"/>
+  <misc:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cd1">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/hint#CommDevice"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m6">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m5"/>
+  <misc:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m7">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m5"/>
+  <misc:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m8">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m5"/>
+  <misc:isLocatedIn rdf:resource="#Guarani2"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m9">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#6BT"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m5"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m10">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#8BTW3"/>
+  <misc:carries rdf:resource="#cd2"/>
+  <misc:isLocatedIn rdf:resource="#Urutu3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cd2">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/hint#CommDevice"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#m11">
+  <rdf:type rdf:resource="https://raw.githubusercontent.com/jcctesolin/s2c2/main/rdfxml/miscon#MilitaryPerson"/>
+  <misc:militaryPersonHasMilitaryOrganization rdf:resource="#8BTW3"/>
+  <misc:militaryPersonIsSubordinateTo rdf:resource="#m10"/>
+  <misc:isLocatedIn rdf:resource="#Urutu3"/>
+</owl:NamedIndividual>
 
 
 </rdf:RDF>

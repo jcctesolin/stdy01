@@ -62,7 +62,7 @@ def create_instance_file(instanciate_items:list):
                             continue
                                          
             
-    sync_reasoner_pellet(infer_property_values=True, infer_data_property_values = True, debug=2)
+    sync_reasoner_pellet(infer_property_values=True, infer_data_property_values = True, debug=0)
     new_onto.save(format = "rdfxml")
             
 if __name__ == "__main__":        
